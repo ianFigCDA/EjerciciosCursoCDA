@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,9 +36,9 @@ public class Main {
         lista.add("Melon");
 
         for (String e : lista) {
-            if(e == nombreFruta){
+            if (e == nombreFruta) {
                 System.out.println("Encontre la fruta en mi lista");
-            }else{
+            } else {
                 System.out.println("No se encontro la fruta en la lista");
             }
         }
@@ -47,10 +48,71 @@ public class Main {
         // que contienen ese String (ejemplo el String "Juan Melo" contiene al String
         // "Melo");
         System.out.println("-------- Ejercicio 3 -----------");
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> nombreCompleto = new ArrayList<>();
+        ArrayList<String> encontrado = new ArrayList<>();
+
+        nombreCompleto.add("Leonel Messi");
+        nombreCompleto.add("Cristiano Ronaldo");
+        nombreCompleto.add("Fernando Perez");
+
+        System.out.println("Di un nombre o apellido: ");
+        String ap = sc.nextLine();
+        String minusc = ap.toLowerCase();
+
+        for (int i = 0; i < nombreCompleto.size(); i++) {
+            String minusc2 = nombreCompleto.get(i).toLowerCase();
+            if (minusc2.contains(minusc)) {
+                System.out.println("Se encontro el nombre o apellido..");
+                encontrado.add(ap);
+                i = nombreCompleto.size();
+            }
+        }
+
+        for (String e : encontrado) {
+            System.out.println("Apellido encontrado: " + e);
+        }
+
         // * invocar un método que genere un Map (clave Long y valor String).
         // Luego invocar a un método que dado este Map retorne si una clave existe o no
         // Luego otro método que dado ese mismo map retorne el valor de una clave.
-        
+
         System.out.println("Hola Mundo");
+
+
+
+
+
+        /*
+        Encontrar en la lista de apellidos, el apellido por teclado y guardarlo en 
+        otra lista de apellidos encontrados
+
+        System.out.println("-------- Ejercicio Extra -----------");
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> apellidos = new ArrayList<>();
+        ArrayList<String> apellidosEncontrados = new ArrayList<>();
+
+        apellidos.add("Messi");
+        apellidos.add("Apellido");
+        apellidos.add("Montaner");
+        apellidos.add("Perez");
+
+        System.out.println("Di un apellido: ");
+        String ap = sc.nextLine();
+
+        for (int i = 0; i < apellidos.size(); i++) {
+            if (apellidos.get(i).equals(ap)) {
+                System.out.println("Se encontro el apellido..");
+                apellidosEncontrados.add(ap);
+            }
+        }
+
+        for (String e : apellidosEncontrados) {
+            System.out.println("Apellido encontrado: " + e);
+        }
+
+        */
     }
 }
