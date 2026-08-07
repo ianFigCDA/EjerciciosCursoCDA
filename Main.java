@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -78,9 +80,19 @@ public class Main {
         // Luego invocar a un método que dado este Map retorne si una clave existe o no
         // Luego otro método que dado ese mismo map retorne el valor de una clave.
 
-        System.out.println("Hola Mundo");
+        System.out.println("-------- Ejercicio 4 -----------");
 
+        Map<Integer, String> map = new HashMap<>();
 
+        map.put(1, "Futbol");
+        map.put(2, "Voley");
+        map.put(3, "Natacion");
+
+        System.out.println(existeMap(map, 1));
+
+        public static boolean existeMap(Map<Integer, String> mapa, Integer key){
+            return mapa.containsKey(key);
+        }
 
 
 
