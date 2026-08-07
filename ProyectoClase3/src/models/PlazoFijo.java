@@ -8,7 +8,5 @@ public class PlazoFijo extends Producto{
         double montoFinal;
         montoFinal = super.saldo * (tasaInteres / 100.0) * (plazoDias / 365.0);
         System.out.println("El monto final es: " + montoFinal);
-
-
     }
 }

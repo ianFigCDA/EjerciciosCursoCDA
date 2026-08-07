@@ -3,6 +3,7 @@ package models;
 public class CuentaCorriente extends CuentaBancaria{
     private double limiteSobregiro;
 
+    @Override
     public void retirar(double monto){
         super.saldo =- monto;
 
