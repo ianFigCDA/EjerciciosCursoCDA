@@ -90,11 +90,6 @@ public class Main {
 
         System.out.println(existeMap(map, 1));
 
-        public static boolean existeMap(Map<Integer, String> mapa, Integer key){
-            return mapa.containsKey(key);
-        }
-
-
 
         /*
         Encontrar en la lista de apellidos, el apellido por teclado y guardarlo en 
@@ -126,5 +121,9 @@ public class Main {
         }
 
         */
+    }
+
+    public static boolean existeMap(Map<Integer, String> mapa, Integer key){
+            return mapa.containsKey(key);
     }
 }
